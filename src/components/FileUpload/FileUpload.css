@@ -1,0 +1,232 @@
+.fileuploadcontainer{
+    width: 100%;
+    height: 100%;
+    
+    font-size: 30px; 
+}
+
+.fileuploadcontainer>form{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 40px;
+    align-items: center;
+}
+
+.fileuploadcontainer>form>.filecontainer{
+    width: 80%;
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: space-around;
+    gap: 50px;
+    align-items: center;
+    padding: 10px;
+    position: relative;
+}
+
+.choseopt{
+    width: 60%;
+    position: relative;
+    height: 100%;
+}
+
+.docs{
+    width: 50px;
+    height: 60px;
+    background-color: #c4c4c4c9;
+    position: absolute;
+    top: 15px;
+    transform: rotateZ(50deg) skew(-10deg,-30deg);
+    box-shadow: 7px 8px 5px rgb(112, 112, 112),
+    5px 5px 15px rgb(203, 202, 202) inset;
+    transition: .4s;
+}
+
+.drop-container:hover>.docs{
+    top: 5px;
+    background-color: rgb(209, 208, 208);
+    box-shadow: 30px 30px 15px rgba(139, 138, 138, 0.829),
+                5px 5px 15px rgba(103, 102, 102, 0.723) inset;
+}
+
+.url{
+    font-size: 26px;
+    width: 100%;
+    cursor: pointer;
+    bottom: 0;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    transition: .4s;
+    height: 40px;
+    background-color: #f3f2f2;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    box-shadow: 0px 30px 30px rgb(222, 222, 222);
+}
+
+
+.url>label>button{
+    border: none;
+    background-color: transparent;
+    font-size: inherit;
+    cursor: pointer;
+    position: relative;
+}
+
+.urltext{
+    position: absolute;
+    background-color: transparent;
+    border:none;
+    width: 0%;
+    height: 30px;
+    border-radius: 5px;
+    font-size: 20px;
+    padding-left: 10px;
+    transition: .4s;
+}
+
+.urltextexpanded{
+    position: relative;
+    border: 1px solid rgb(167, 165, 165);
+    background-color: white;
+    width: 50%;
+}
+
+
+.badurl{
+    color: red;
+    outline-color: red;
+}
+
+.url>label>button::after{
+    content: '';
+    background-color: black;
+    height: 2px;
+    width: 0%;
+    position: absolute;
+    left: 7px;
+    bottom: 0;
+    transition: .4s;
+}
+
+.url:hover>label>button::after{
+    width: 80%;
+}
+
+
+.drop-container {
+    position: relative;
+    display: flex;
+    gap: 10px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 300px;
+    width: 100%;
+    border-radius: 10px;
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+    color: #444;
+    cursor: pointer;
+    box-shadow: 0px -20px 30px rgb(213, 212, 212);
+}
+
+.drop-container:hover {
+    background: #f5f5f5;
+    box-shadow: 0px 0px 30px rgba(205, 205, 205, 0.77),
+    inset 0px -20px 20px rgba(255, 255, 255, 0.77);
+}
+
+input[type=file]::file-selector-button, .submitbtn {
+    margin-right: 20px;
+    border: none;
+    background: #084cdf;
+    padding: 10px 20px;
+    border-radius: 10px;
+    font-size: 20px;
+    color: #fff;
+    cursor: pointer;
+    transition: .4s;
+}
+
+input[type=file]::file-selector-button:hover, .submitbtn:hover {
+    background: #0d45a5;
+}
+
+.drop-container:hover .drop-title {
+    color: #222;
+}
+
+.drop-title {
+    color: #444;
+    font-size: 50px;
+    font-weight: bold;
+    text-align: center;
+    transition: color .2s ease-in-out;
+}
+
+
+.submitbtn{
+    height: 50px;
+}
+
+
+.loading{
+    width: max-content;
+    height: 30px;
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+}
+
+.loading1,.loading2,.loading3,.loading4{
+    content: '';
+    background-color: rgb(64, 14, 143);
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+}
+
+.loading1{
+    animation: loading 1s ease-in-out infinite;
+}
+.loading2{
+    animation: loading 1s .4s ease-in-out infinite;
+}
+.loading3{
+    animation: loading 1s .6s ease-in-out infinite;
+}
+.loading4{
+    animation: loading 1s .8s ease-in-out infinite;
+}
+
+@keyframes loading{
+    0%{
+        transform: translateY(0%);
+    }
+    50%{
+        transform: translateY(-100%);
+    }
+    100%{
+        transform: translateY(0%);
+    }
+}
+
+
+
+
+@media (max-width:1200px) {
+    .fileuploadcontainer>.filecontainer{
+        flex-direction: column-reverse;
+        gap: 20px;
+    }
+
+    .choseopt{
+        width: 100%;
+    }
+}
