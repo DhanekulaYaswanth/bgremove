@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/bgremove/static/css/main.d928df6d.css",
+    "main.js": "/bgremove/static/js/main.c1761e06.js",
+    "index.html": "/bgremove/index.html",
+    "main.d928df6d.css.map": "/bgremove/static/css/main.d928df6d.css.map",
+    "main.c1761e06.js.map": "/bgremove/static/js/main.c1761e06.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.d928df6d.css",
+    "static/js/main.c1761e06.js"
+  ]
+}
